@@ -12,6 +12,7 @@ def barcode_generator():
     print(num)
     image = barcode.get_barcode_class('ean13')
     image_bar = image(u'{}' .format(num))
-    file = open('annajoen:\\vj1.svg', "wb")
-    image_bar.writer(file)
+    file = open('../vj1.svg', "wb")
+    image_bar.write(file)
     return "Barcode Generated Successfully!"
+
